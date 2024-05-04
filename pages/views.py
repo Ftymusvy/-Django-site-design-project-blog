@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import sys
+
 
 def index(request):
     return render(request, 'pages/index.html')
