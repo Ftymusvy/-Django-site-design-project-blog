@@ -31,7 +31,13 @@
           >
             <a class="nav-link" href="{% url 'about' %}">درباره</a>
           </li>
-          <li class="nav-item mr-3">
+          <li 
+            {% if 'posts' in request.path %}
+              class="nav-item active mr-3"
+            {% else %}  
+              class="nav-item mr-3"
+            {% endif %} 
+       >
               <a class="nav-link" href="{% url 'posts' %}">لیست پست ها</a>
             </li>
         </ul>

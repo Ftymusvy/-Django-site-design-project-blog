@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bloggers.apps.BloggersConfig',
     'posts.apps.PostsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
