@@ -8,4 +8,6 @@ class BloggerAdmin(admin.ModelAdmin):
     search_fields = ['name', 'email', 'phone']
     list_per_page = 10
 
+    readonly_fields = ['posts_count']
+
 admin.site.register(Blogger , BloggerAdmin)

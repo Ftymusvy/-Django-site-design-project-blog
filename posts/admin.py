@@ -10,4 +10,6 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ['title', 'text', 'blogger__name']
     list_per_page = 20
 
+    readonly_fields = ['comments_count', 'likes_count']
+
 admin.site.register(Post , PostAdmin)
