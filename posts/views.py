@@ -4,7 +4,7 @@ from .models import Post
 
 def index(request):
 # گرفتن اطلاعات پست ها
-    posts_list = Post.objects.all()
+    posts_list = Post.objects.order_by('-post_date').filter(is_published = True)
 
 # ساخت paginator
     paginator = Paginator(posts_list , 3)   
