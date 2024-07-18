@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize', # برای درست نشان دادن اعداد بیشتر از 3 رقمی
 ]
 
 MIDDLEWARE = [

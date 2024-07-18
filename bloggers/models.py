@@ -14,5 +14,6 @@ class Blogger(models.Model):
     phone = models.CharField(max_length=200)
 
     def __str__(self) -> str:
-        return self.name
+        return self.name   #برای نمایش اسم بلاگر هنگام داینامیک کردن آن در بخش پست ها 
+    
 
