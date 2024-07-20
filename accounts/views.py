@@ -49,9 +49,30 @@ def login(request):
 
  if request.method == 'POST':
     # login user
-    pass 
+    username = request.POST['username']
+    password = request.POST['password']
+    
+    user = auth.authenticate(username = username , password=password)
+
+    if user is not None:
+       auth.login(request , user)
+       messages.success(request , 'شما وارد سایت شدید')
+       return redirect('index')
+    else :
+       messages.error(request , 'رمز اشتباه وارد شده لطفا دوباره امتحان کنید')
+       return redirect('login')
+
+    
  else:   
     return render(request , 'accounts/login.html')
 
 def logout(request):
-    return redirect('index')
+    if request.method == 'POST':
+       auth.logout(request)
+       messages.success(request , 'شما از حساب کاربری خارج شدید')
+       return redirect('index')
+    else:
+        return redirect('index')
+
+
+    
