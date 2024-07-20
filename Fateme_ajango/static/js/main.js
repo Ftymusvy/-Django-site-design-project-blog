@@ -38,3 +38,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // Your code to run since DOM is loaded and ready
 });
+
+setTimeout(function(){
+
+  $('#message').fadeOut('slow');
+
+}, 3000)  
+// مسیجی که میاید بعد از 3 ثانیه خودش 
+//fadeout
+// بشود
