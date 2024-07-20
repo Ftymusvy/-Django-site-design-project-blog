@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'comments.apps.CommentsConfig',
     'bloggers.apps.BloggersConfig',
     'posts.apps.PostsConfig',
+    'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
